@@ -1,0 +1,10 @@
+body {
+  color: red;
+  background-image: url("/background.jpg");
+}
+
+body .container .text-center .jumbo {
+  -webkit-box-shadow: 0 0 5px 5px rgba(27, 49, 73, 0.6);
+          box-shadow: 0 0 5px 5px rgba(27, 49, 73, 0.6);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Mettre le style après : CASCADE + no dash before link -->
+    <title>Hangman</title>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="bg"></div>
+        <h1 class="text-center">Hangman</h1>
+        <div class="float-right">Wrong Guesses: <span id="mistakes">0</span> of <span id="maxWrong"></span></div>
+        <div class="text-center">
+            <img id="hangmanPic" class="col-lg-4 w-25" src="./images/0.png" alt="hangman post">
+            <div id="guess">
+                <p>Guess the DC Character</p>
+                <p id="wordSpotLight">The word to be guessed goes here</p>
+            </div>
+            <div id="keyboard"></div>
+            <button class="btn btn-info btn-info" onClick="reset()">Try again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="ester.js"></script>
+</body>
+
+</html>
