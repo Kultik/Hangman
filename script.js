@@ -100,7 +100,7 @@ function checkIfGameLost() {
 }
 
 function guessedWord() {
-    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " 🤡 ")).join(''); // indexOf check if the letter exists in the guessed array that we have guessed previously. If it does exist bigger than 0, pointing to which position it is in. If it doesnt exist equal to 0. + join to erase comas.
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : "💀")).join(''); // indexOf check if the letter exists in the guessed array that we have guessed previously. If it does exist bigger than 0, pointing to which position it is in. If it doesnt exist equal to 0. + join to erase comas.
     document.getElementById('wordSpotLight').innerHTML = wordStatus;
 }
 
