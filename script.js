@@ -36,12 +36,12 @@ var superheroes = [
 //  investigate : to lower case 
 
 let answer = '';
-let maxWrong = 7;
+let maxWrong = 7; // defined after editing drawings
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
 
-
+// selecting random word
 function randomWord() {
     answer = superheroes[Math.floor(Math.random() * superheroes.length)];
     // alert(answer); atm : to check if answer popping off
@@ -52,11 +52,11 @@ function randomWord() {
 
 function generateButtons() {
     let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter => // Split : to split by nothing the letters. Map/letter = for representing each and everyone of the loots items in the array we just created from the variable ABC. Closing tag on L52(after first letter) capital to press letters
-        `<button class="btn btn-lg btn-warning m-2" id="` + letter + `" onClick="handleGuess('` + letter + `')">
+        `<button class="btn btn-lg btn-warning m-2" style="width:2em;text-align:center;" id="` + letter + `" onClick="handleGuess('` + letter + `')">
         ` + letter + ` 
     </button>
     `).join(''); // .join to get rid of comas between buttons
-    document.getElementById("keyboard").innerHTML = buttonsHTML; // call keyboard div
+    document.getElementById("keyboard").innerHTML = buttonsHTML; // call keyboard div and inserting mapped buttons into it
 }
 
 // *** Handle the Guess *** HANDLE IT WELL
@@ -80,13 +80,13 @@ function handleGuess(chosenLetter) {
 
 // *** HANGMAN PICTURE ***
 function updateHangmanPicture() {
-    document.getElementById('hangmanPic').src = "./images/" + mistakes + '.png';
+    document.getElementById('hangmanPic').src = "./images/" + mistakes + '.png'; // going through edited pictures - added in loop of word selection in if/else
 }
 
 //*** Check if game WON ***
 function checkIfGameWon() {
     if (wordStatus === answer) {
-        document.getElementById('keyboard').innerHTML = 'Yeh Won!';
+        document.getElementById('keyboard').innerHTML = 'Yeh Won! Lucky I guess...';
     }
 }
 
@@ -105,7 +105,7 @@ function guessedWord() {
 }
 
 function updateMistakes() {
-    document.getElementById('mistakes').innerHTML = mistakes;
+    document.getElementById('mistakes').innerHTML = mistakes; // just summing the number of wrong guesses
 }
 
 // *** Reset Button ***
@@ -120,7 +120,7 @@ function reset() {
     generateButtons(); // generate kb buttons so there is no disabled button on kb
 }
 
-document.getElementById("maxWrong").innerHTML = maxWrong;
+document.getElementById("maxWrong").innerHTML = maxWrong; // ceiling shot
 
 randomWord(); // calling the function 
 generateButtons();

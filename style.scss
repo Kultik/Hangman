@@ -3,6 +3,14 @@
 $primary: #fd8b00;
 $secondary: #9dd1ff;
 
+// *** Media Queries ***
+
+@media only screen and (max-width: 600px) {
+    #hangmanPic {
+        width: 70%;
+    }
+}
+
 
 body {
     // color: white;
@@ -34,3 +42,4 @@ body {
         }     
     }
 }
+
